@@ -40,4 +40,8 @@ rm -rf *${deleteday}*
 cd /home/ganghuic/overleaf/overleaf_backup
 rm -rf *${deleteday}*
 
+cd /home/ganghuic/dzzoffice/dzzoffice_backup/dzzoffice
+rm -rf *${deleteday}*
 
+cd /home/ganghuic/dzzoffice/dzzoffice_backup/mysql
+rm -rf *${deleteday}*

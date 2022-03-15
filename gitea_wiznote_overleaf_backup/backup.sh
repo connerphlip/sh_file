@@ -43,3 +43,11 @@ mv ${cur_date}.tar.gz ../
 cd ..
 rm -rf ${cur_date}
 
+
+cd /home/ganghuic/dzzoffice/dzzoffice_backup/dzzoffice
+docker cp b55:/var/www/html ./
+tar -zpc ./html -f ${cur_date}.tar.gz
+rm -rf ./html
+
+cd /home/ganghuic/dzzoffice/dzzoffice_backup/mysql
+docker exec -it 5e137b403f52 mysqldump --defaults-extra-file=/etc/mysql/my.cnf dzzoffice > /home/ganghuic/dzzoffice/dzzoffice_backup/mysql/${cur_date}.sql
